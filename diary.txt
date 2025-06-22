@@ -1,0 +1,11 @@
+
+ 
+22/06/2025 Sunday 11:19 PM 
+Person making entry: Hugh Mortimer
+Progress since last entry: Started project, started by making the base classes for the system and the items that populate it
+Tasks Achieved: Made base classes
+Issue(s) encountered: -
+Solution(s): -
+Approaches for upcoming tasks: Have a file where I can run the code to debug, as I haven't looked at it yet
+Reflective comments: I'm happy I've made a solid start
+Resources used: Codespace
