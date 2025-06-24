@@ -11,3 +11,6 @@ class Book(Item):
         super().__init__(system, itemName, available, author, id)
         self.pages = pages
         self.genre = genre
+    
+    def display_info(self):
+        print(f'This book is called {self.itemName}, written by {self.author}, is in genre {self.genre}, {self.pages} long and is{' Not' if not self.available else ""} available')

@@ -9,7 +9,7 @@ from .system import System
 class Item():
     def __init__(self, system:object, itemName:str, available:bool, author=None, id=None):
         # initialize object
-        self.name = itemName
+        self.itemName = itemName
         self.available = available
         self.author = author
 
@@ -20,4 +20,24 @@ class Item():
             self.id = str(random.randint(000000000,999999999))
         
         # import the newly made object into the system
-        System.newItem(system, self.id, self.name, self)
+        System.newItem(system, self.id, self.itemName, self)
+    
+    def __str__(self):
+        return(f'Item type: {self.__class__.__name__}\nItem Name: {self.itemName}\nID: {self.id}')
+
+    def display_info(self):
+        print(f'This item is called {self.itemName}, and is{' Not' if not self.available else ""} available')
+    
+    def borrow_item(self):
+        if self.available:
+            self.available = False
+            print(f'{self.itemName} has been successfully borrowed')
+        else:
+            print(f"This item is not available")
+    
+    def return_item(self):
+        if not self.available:
+            self.available = True
+            print(f'{self.itemName} has been successfully returned')
+        else:
+            print(f"This item has not been borrowed")
