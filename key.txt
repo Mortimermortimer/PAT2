@@ -1,0 +1,11 @@
+Item
+system, itemName, available, author (opt), id (opt)
+
+Book
+system, itemName, available, author, pages, genre, id (opt)
+
+DVD
+system, itemName, available, duration, director, id (opt)
+
+Magazine
+system, itemName, available, author, issue, publishDate, id (opt)

@@ -17,3 +17,13 @@ Solution(s): -
 Approaches for upcoming tasks: Do CLI
 Reflective comments: I done good
 Resources used: Codespace
+ 
+26/06/2025 Thursday 12:48 PM 
+Person making entry: Hugh Mortimer
+Progress since last entry: Made exporting, imports and main menu and add in the CLI
+Tasks Achieved: exports, imports, main menu CLI, add CLI
+Issue(s) encountered: 
+Solution(s): 
+Approaches for upcoming tasks: 
+Reflective comments: I done good
+Resources used: Codespace
