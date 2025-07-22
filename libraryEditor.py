@@ -64,8 +64,24 @@ def add():
         else:
             clear()
 
+def selectTypeAvailable():
+    for i, type in enumerate(mainSys.typeDictionary):
+        print(f'{i+1}. {type}')
+    print(f'{i+2}. View all')
+    selection = int(input("Choose a number to continue: ")) #nec
+    if selection == len(mainSys.typeDictionary) + 1:
+        return mainSys.records
+    else:
+        for i, type in enumerate(mainSys.typeDictionary):
+            if i + 1 == selection:
+                return mainSys.typeDictionary[type]
+
 def remove():
-    pass
+    clear()
+    print("Remove records") #nec check if there are records at all
+    records = selectTypeAvailable()
+    print(records)
+    input()
 
 def borrow():
     pass
@@ -86,4 +102,7 @@ while True:
     elif inp == '4':
         returnItem()
     elif inp == '5':
+        export(mainSys)
+        break
+    elif inp == '6':
         break

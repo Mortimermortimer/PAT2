@@ -26,7 +26,14 @@ class Item():
         return(f'Item type: {self.__class__.__name__}\nItem Name: {self.itemName}\nID: {self.id}')
 
     def display_info(self):
-        print(f'This item is called {self.itemName}, and is{' Not' if not self.available else ""} available')
+        print(f'Item')
+        print(self.name)
+        if self.author:
+            print(self.author)
+        if self.available:
+            print("🟩 Available to borrow")
+        else:
+            print("🟥 Unavailable to borrow")
     
     def borrow_item(self):
         if self.available:

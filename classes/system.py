@@ -6,14 +6,19 @@ class System:
     def __init__(self, branchName):
         # Initializes library system
         self.name = branchName
-        self.idDictionary = {}
-        self.nameDictionary = {}
+        self.idDictionary = {} #stores {ID: Object location}
+        self.nameDictionary = {} #stores {Name: Object location}
+        self.typeDictionary = {} #stores {Item type: Object location}
         self.records = []
     
     def newItem(self, itemID:str, itemName:str, itemObject:object):
-        # Adds new items to the dictionary
+        # Adds new items to the dictionaries
         self.idDictionary[itemID] = itemObject
         self.nameDictionary[itemName] = itemObject
+        if itemObject.__class__.__name__ in self.typeDictionary:
+            self.typeDictionary[itemObject.__class__.__name__].append(itemObject)
+        else:
+            self.typeDictionary[itemObject.__class__.__name__] = [itemObject]
         self.records.append(itemObject)
     
     def printItems(self):
