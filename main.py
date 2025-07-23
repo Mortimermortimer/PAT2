@@ -3,6 +3,8 @@ from classes.item import Item
 from classes.book import Book
 from classes.dvd import DVD
 from classes.magazine import Magazine
+from jsonSavingSystem import saveToJson
+import json
 
 epping = System('Epping')
 
@@ -14,3 +16,7 @@ atomicHabits.borrow_item()
 atomicHabits.borrow_item()
 atomicHabits.return_item()
 atomicHabits.return_item()
+print(epping.idToNameDictionary)
+data = saveToJson(epping.idToNameDictionary)
+with open('data.json', 'w') as f:
+    json.dump(data, f)

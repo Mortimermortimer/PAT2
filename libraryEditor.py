@@ -80,8 +80,14 @@ def remove():
     clear()
     print("Remove records") #nec check if there are records at all
     records = selectTypeAvailable()
-    print(records)
-    input()
+    clear()
+    print("Pick a number to delete: ")
+    for i, record in enumerate(records):
+        print(f'{i+1} {record.itemName}')
+    selection = int(input()) #nec
+    if 0 <= selection < len(records):
+        records[selection-1].delete()
+
 
 def borrow():
     pass

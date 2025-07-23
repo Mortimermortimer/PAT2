@@ -9,12 +9,14 @@ class System:
         self.idDictionary = {} #stores {ID: Object location}
         self.nameDictionary = {} #stores {Name: Object location}
         self.typeDictionary = {} #stores {Item type: Object location}
+        self.idToNameDictionary = {} #stores {ID: Name}
         self.records = []
     
     def newItem(self, itemID:str, itemName:str, itemObject:object):
         # Adds new items to the dictionaries
         self.idDictionary[itemID] = itemObject
         self.nameDictionary[itemName] = itemObject
+        self.idToNameDictionary[itemID] = itemName
         if itemObject.__class__.__name__ in self.typeDictionary:
             self.typeDictionary[itemObject.__class__.__name__].append(itemObject)
         else:
@@ -23,3 +25,7 @@ class System:
     
     def printItems(self):
         print(self.nameDictionary)
+    
+    def delete(self):
+        pass 
+        #DELETE FUNCTION NEEDED
