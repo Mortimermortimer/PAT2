@@ -1,43 +1,52 @@
+#Helper function that gets saved items from a csv and turns them into python objects
+#Also exports python objects to csv
+
 from classes.item import Item
 from classes.book import Book
 from classes.dvd import DVD
 from classes.magazine import Magazine
 from csvTo2dArray import csvTo2dArray
 
+def return_bool(text):
+    if text == 'False':
+        return False
+    else:
+        return True
+
 def create_item(array, system): #turns csv record into base item
     if len(array) == 3:
-        Item(system, array[1], bool(array[2])) #Just Item name And if Available
+        Item(system, array[1], return_bool(array[2])) #Just Item name And if Available
     elif len(array) == 4:
-        Item(system, array[1], bool(array[2]), array[3]) #Item name, available, author
+        Item(system, array[1], return_bool(array[2]), array[3]) #Item name, available, author
     elif len(array) == 5:
         if array[4] == "":
-            Item(system, array[1], bool(array[2]), id=array[4]) #Item name, available, id
+            Item(system, array[1], return_bool(array[2]), id=array[4]) #Item name, available, id
         else:
-            Item(system, array[1], bool(array[2]), array[3], array[4]) #Item name, available, author, id
+            Item(system, array[1], return_bool(array[2]), array[3], array[4]) #Item name, available, author, id
     else:
         print(f"Error entering record: {array}")
 
 def create_book(array, system):
     if len(array) == 6:
-        Book(system, array[1], bool(array[2]), array[3], array[4], array[5]) #Item name, available, author, pages, genre
+        Book(system, array[1], return_bool(array[2]), array[3], array[4], array[5]) #Item name, available, author, pages, genre
     elif len(array) == 7:
-        Book(system, array[1], bool(array[2]), array[3], array[4], array[5], array[6]) #Item name, available, author, pages, genre, id
+        Book(system, array[1], return_bool(array[2]), array[3], array[4], array[5], array[6]) #Item name, available, author, pages, genre, id
     else:
         print(f"Error entering record: {array}")
 
 def create_dvd(array, system):
     if len(array) == 5:
-        DVD(system, array[1], bool(array[2]), array[3], array[4]) #Item name, available, duration, director
+        DVD(system, array[1], return_bool(array[2]), array[3], array[4]) #Item name, available, duration, director
     elif len(array) == 6:
-        DVD(system, array[1], bool(array[2]), array[3], array[4], array[5]) #Item name, available, duration, director, id
+        DVD(system, array[1], return_bool(array[2]), array[3], array[4], array[5]) #Item name, available, duration, director, id
     else:
         print(f"Error entering record: {array}")
 
 def create_magazine(array, system):
     if len(array) == 6:
-        Magazine(system, array[1], bool(array[2]), array[3], array[4], array[5]) #Item name, available, author, issue, publish date
+        Magazine(system, array[1], return_bool(array[2]), array[3], array[4], array[5]) #Item name, available, author, issue, publish date
     elif len(array) == 7:
-        Magazine(system, array[1], bool(array[2]), array[3], array[4], array[5], array[6]) #Item name, available, author, issue, publish date, id
+        Magazine(system, array[1], return_bool(array[2]), array[3], array[4], array[5], array[6]) #Item name, available, author, issue, publish date, id
     else:
         print(f"Error entering record: {array}")
 
@@ -54,7 +63,7 @@ def batch_import(fileName, system):
             create_magazine(item, system)
 
 def export(system):
-    with open("libraryRecords.csv", 'w') as f:
+    with open(f"{system.name}LibraryRecords.csv", 'w') as f:
         f.write("Library records exported\n")
         for item in system.records:
             if item.__class__.__name__ == "Item":
