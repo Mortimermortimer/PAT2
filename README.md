@@ -1,6 +1,8 @@
 PAT2
 Preliminary Course Assessment task 2 2025 - Library System
 
+** MAIN FILE IS CALLED "libraryEditor.py** CLI IS FOUND THERE **
+
 This file contains
 1. Class Explanations
 2. File Explanations
