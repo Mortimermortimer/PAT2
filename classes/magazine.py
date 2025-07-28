@@ -13,4 +13,13 @@ class Magazine(Item):
         self.publishDate = publishDate
     
     def display_info(self):
-        print(f'This {self.__class__.__name__} is called {self.itemName}, created by {self.author}, is issue number {self.issue}, was published on {self.publishDate} and is{' Not' if not self.available else ""} available')
+        print(f'Name: {self.itemName}')
+        print(f'Item type: Magazine')
+        print(f'ID: {self.id}')
+        print(f'Author: {self.author}')
+        if self.available:
+            print("Available: 🟩")
+        else:
+            print("Available: 🟥")
+        print(f'Issue: {self.issue}')
+        print(f'Publish Date: {self.publishDate}')

@@ -25,4 +25,16 @@ class System:
     
     def printItems(self):
         print(self.nameDictionary)
+
+    def detailedPrintItems(self):
+        for item in self.records:
+            item.display_info()
+            print()
+    
+    def availabilityPrint(self):
+        for item in self.records:
+            if item.available:
+                print(f'🟩 {item.itemName}')
+            else:
+                print(f'🟥 {item.itemName}')
     

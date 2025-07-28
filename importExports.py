@@ -75,7 +75,7 @@ def export(system):
                 f.write(f'Book,{item.itemName},{item.available},{item.author},{item.pages},{item.genre},{item.id}\n')
             elif item.__class__.__name__ == "DVD":
                 f.write(f'DVD,{item.itemName},{item.available},{item.duration},{item.director},{item.id}\n')
-            elif item.__class__.__name__ == "Book":
-                f.write(f'Magazine,{item.itemName},{item.available},{item.author},{item.issue},{item.date},{item.id}\n')
+            elif item.__class__.__name__ == "Magazine":
+                f.write(f'Magazine,{item.itemName},{item.available},{item.author},{item.issue},{item.publishDate},{item.id}\n')
             else:
-                print(f"Error exporting record {item.name}")
+                print(f"Error exporting record {item.itemName}")

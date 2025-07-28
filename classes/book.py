@@ -13,4 +13,13 @@ class Book(Item):
         self.genre = genre
     
     def display_info(self):
-        print(f'This book is called {self.itemName}, written by {self.author}, is in genre {self.genre}, {self.pages} long and is{' Not' if not self.available else ""} available')
+        print(f'Name: {self.itemName}')
+        print(f'Item type: Book')
+        print(f'ID: {self.id}')
+        print(f'Author: {self.author}')
+        if self.available:
+            print("Available: 🟩")
+        else:
+            print("Available: 🟥")
+        print(f'Pages: {self.pages}')
+        print(f'Genre: {self.genre}')

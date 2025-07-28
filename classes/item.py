@@ -3,7 +3,6 @@
 # Used to populate the system with items
 # Parent to book, magazine and DVD classes
 
-import random
 from .system import System
 
 class Item():
@@ -27,14 +26,15 @@ class Item():
         return(f'Item type: {self.__class__.__name__}\nItem Name: {self.itemName}\nID: {self.id}')
 
     def display_info(self):
-        print(f'Item')
-        print(self.name)
+        print(f'Name: {self.itemName}')
+        print(f'Item type: Item')
+        print(f'ID: {self.id}')
         if self.author:
-            print(self.author)
+            print(f'Author: {self.author}')
         if self.available:
-            print("🟩 Available to borrow")
+            print("Available: 🟩")
         else:
-            print("🟥 Unavailable to borrow")
+            print("Available: 🟥")
     
     def borrow_item(self):
         if self.available:
@@ -53,6 +53,7 @@ class Item():
     def delete(self):
         self.system.idDictionary.pop(self.id, None)
         self.system.nameDictionary.pop(self.itemName, None)
+        self.system.records.remove(self)
         item_type = self.__class__.__name__
         if item_type in self.system.typeDictionary:
             if self in self.system.typeDictionary[item_type]:

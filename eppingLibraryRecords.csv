@@ -1,5 +1,21 @@
 Library records exported
-Book,First Book,True,Hugh,200,Self Improvement,ELI1
-Item,gab,True,,ELI2
-DVD,ball,False,4h 52m,me,ELI3
-Item,new,True,blue,ELI4
+Item,Library Guide to Cataloging,True,Jessie Lin,ELI1
+Item,How Libraries Work,True,Martin Clay,ELI2
+Item,Public Library Handbook,False,Nicole Kim,ELI3
+Item,Digital Archiving Basics,True,Liam Connor,ELI4
+Item,Community and Literacy,True,Ava Toh,ELI5
+Book,The Last Time We Spoke,True,Karen O’Malley,342,Fiction,ELI6
+Book,Coding for Kids,True,Jamie Sparks,112,Educational,ELI7
+Book,History of the Silk Road,False,Dr. Rajiv Menon,256,History,ELI8
+Book,Poems from the Outback,True,Emily Fraser,89,Poetry,ELI9
+Book,Modern Architecture,False,Nathan Yeo,310,Nonfiction,ELI10
+DVD,Planet Earth: Oceans,True,60 min,David Attenborough,ELI11
+DVD,The Grand Heist,True,114 min,Stephanie Cho,ELI12
+DVD,Cooking Masterclass,True,75 min,Marco Rossi,ELI13
+DVD,Learn Tai Chi,True,90 min,Ming Zhao,ELI14
+DVD,Kids Sing-Along,True,42 min,Linda Chen,ELI15
+Magazine,Science Monthly,False,Dr. Sasha Reid,221,2025-04-01,ELI16
+Magazine,Australian Fiction Weekly,False,Terry Law,378,2025-07-14,ELI17
+Magazine,Nature & You,True,Holly Grant,198,2025-06-10,ELI18
+Magazine,Tech Tinker,True,Felix Ng,443,2025-07-01,ELI19
+Magazine,Global Gardens,False,Maya Elston,167,2025-05-20,ELI20
