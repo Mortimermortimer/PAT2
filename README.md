@@ -11,32 +11,31 @@ This file contains
 5. Canned Behaviour output
 
 
-# #
-# //
+
+
 # 1. Class Explanations
-# //
-# #
 
-#
-# System
-#
 
-Overview
+
+## System
+
+
+###Overview
 System runs the library system. For each library branch there is e.g. arden library, epping library, a new system object is instantsiated. It houses all of the dictionaries holding all objects.
 
-Functions
+###Functions
 init - initializes the system
 newItem - adds a new item created in the system to all of the dictionaries
 printItems - prints the {Name: Object location} dictionary
 
-#
-# Item
-#
 
-Overview
+## Item
+
+
+###Overview
 Item is the Parent class of all items, it is parent to Book, DVD, Magazine. Items populate the library with objects.
 
-Functions
+###Functions
 init - initializes the system, if an ID is not provided, one will be created for it. Uses the systems function newItem
 str - magic method that returns data about the item
 display_info - Displays some info about the item
@@ -44,80 +43,80 @@ borrow_item - sets the items available state to false if possible, otherwise thr
 return_item - sets the items available state to true if possible, otherwise throws error
 delete - deletes item from all dictionaries and lists in the system
 
-#
-# Book, DVD, Magazine
-#
 
-Overview
+## Book, DVD, Magazine
+
+
+###Overview
 All these classes do the same thing, but with slightly different attributes. They are all child to Item.
 
-Functions
+###Functions
 init - Initializes by using the super method, which INHERITS the Item class, then adds the other specific attributes
 display_info - uses POLYMORPHISM to override the parent class and display more specific info about the item
 
-# #
-# //
+
+
 # 2. File Explanations
-# //
-# #
 
-#
-# cannedBehaviour.py
-#
 
-Overview
+
+
+## cannedBehaviour.py
+
+
+###Overview
 Runs step by step procedural code that demonstrates the features of the program
 
-#
-# csvTo2dArray.py
-#
 
-Overview
+## csvTo2dArray.py
+
+
+###Overview
 Used by other files, it contains a helper function that converts a csv into a 2d array, making it easier to work with
 
-#
-# eppingLibraryRecords.csv
-#
 
-Overview
+## eppingLibraryRecords.csv
+
+
+###Overview
 Sample database used by libraryEditor.py, contains pre populated items
 
-#
-# importsExports.py
-#
 
-Overview
+## importsExports.py
+
+
+###Overview
 Uses a csv to instantsiate objects, used as a helper function. Also exports instantiated objects to a csv
 
-#
-# key.txt
-#
 
-Overview
+## key.txt
+
+
+###Overview
 Key for how different objects are stored in the database
 
-#
-# libraryEditor.py
-#
 
-Overview
+## libraryEditor.py
+
+
+###Overview
 Runs the CLI - which is used to edit the library
 
-# #
-# //
-# 3. User Instructions
-# //
-# #
 
-#
-# cannedBehaviour.py
-#
+
+# 3. User Instructions
+
+
+
+
+## cannedBehaviour.py
+
 
 Run the program, read the terminal, when ready for next step, press enter. All instructions are in green, and system output is black
 
-#
-# libraryEditor.py
-#
+
+## libraryEditor.py
+
 
 Run the program
 Select your action by entering the corresponding number
@@ -125,11 +124,9 @@ Follow further instructions
 At the end press 7 to save and exit
 At any point - press enter to cancel
 
-# #
-# //
+
 # 4. Class Heirarchy
-# //
-# #
+
 
 System is needed for Item, but item does not inherit from system.
 
@@ -142,11 +139,9 @@ System is needed for Item, but item does not inherit from system.
             \ /
     Book, DVD, Magazine
 
-# #
-# //
+
 # 5. Canned Behaviour Output
-# // 
-# #
+
 
 **For a coloured version (recommended) - please run the file**
 
@@ -231,13 +226,11 @@ And that's just a quick overview of the system
 For a more detailed look, try out the CLI on the libraryEditor.py page
 There are many more features to try out there
 
-# #
-# //
-# 6. Other Outputs
-# //
-# #
 
-# Catalogue
+# 6. Other Outputs
+
+
+## Catalogue
 
 
 20 Matches found
@@ -304,7 +297,7 @@ There are many more features to try out there
 
 Select a number to continue:
 
-# Search
+## Search
 
 Search by
 1. Name
@@ -313,7 +306,7 @@ Search by
 4. Not Available
 Select a number to continue: 
 
-# Create
+## Create
 
 Create new records
 1. Item
@@ -322,7 +315,7 @@ Create new records
 4. Magazine
 Choose a number to continue: 
 
-# Remove
+## Remove
 
 Remove records
 1. Item
@@ -332,7 +325,7 @@ Remove records
 5. View all
 Choose a number to continue: 
 
-# Main menu
+## Main menu
 
 1. Add
 2. Remove
